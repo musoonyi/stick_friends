@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------
+   배너 디자인 기준 캔버스 사이즈
+   변수를 :root가 아니라 .main_banner에 스코프해서
+   사이트 전역에 영향 주지 않도록 함
+------------------------------------------------------- */
+.main_banner {
+    --design-width: 1200;
+    --design-height: 3681;
+    --min-scale: 0.5;
+    --banner-crop: 0.55;   /* 이 숫자로 여백 조절 */
+
+    padding: 30px;
+    width: 100%;
+    max-height: calc(min(100vw, calc(var(--design-width) * 1px)) * var(--design-height) / var(--design-width) * var(--banner-crop));
+    overflow: hidden;
+    background-image: url(../images/banner_background.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+/* 배너 안 이미지만 100% 채움 (사이트 전역 img 규칙과 분리) */
+.main_banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main_banner .inner {
+    width: 100%;
+    max-width: calc(var(--design-width) * 1px);
+    margin: 0 auto;
+    position: relative;
+    aspect-ratio: var(--design-width) / var(--design-height);
+    min-width: 320px;
+}
+
+/* 무지개 */
+.banner_rainbow {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    z-index: 2;
+    --nw: 1120;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* 배너 아이스크림 대표이미지 */
+.banner_icecreams {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    z-index: 4;
+    --nw: 1130;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* 구름들 */
+.cloude_1 {
+    position: absolute;
+    top: 22%;
+    left: 1%;
+    z-index: 2;
+    --nw: 433;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.cloude_2 {
+    position: absolute;
+    top: 22%;
+    right: -5%;
+    z-index: 2;
+    --nw: 433;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.cloude_3 {
+    position: absolute;
+    top: 2.72%;
+    right: 1%;
+    --nw: 259;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.cloude_4 {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    z-index: 1;
+    --nw: 259;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* 배너로고이미지 */
+.banner_logo_img {
+    position: absolute;
+    top: 18%;
+    left: 8%;
+    z-index: 4;
+    --nw: 1000;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* 슈팅스타 */
+.suting_star,
+.suting_star_small {
+    transform: rotate(45deg);
+}
+.suting_star1 {
+    position: absolute;
+    top: 35%;
+    left: 1%;
+    z-index: 1;
+    --nw: 394;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+    animation: sutingstar 3s 1s linear infinite;
+}
+.suting_star2 {
+    position: absolute;
+    top: 27.17%;
+    right: -10%;
+    z-index: 1;
+    --nw: 394;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+    animation: sutingstar 4s 1s linear infinite;
+}
+.suting_star_small_1 {
+    position: absolute;
+    top: 28%;
+    left: 5%;
+    z-index: 1;
+    --nw: 248;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+    animation: sutingstar 2s 2s linear infinite;
+}
+.suting_star_small_2 {
+    position: absolute;
+    top: 40%;
+    right: -20%;
+    z-index: 1;
+    --nw: 248;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+    animation: sutingstar 2s 1s linear infinite;
+}
+
+@keyframes sutingstar {
+    0% {
+        transform: translate(0, 0) rotate(45deg) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(-100px, 100px) rotate(45deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-300px, 300px) rotate(45deg) scale(0);
+        opacity: 0;
+    }
+}
+
+/* 고양이 */
+.cat {
+    position: absolute;
+    top: 32.5%;
+    left: 30%;
+    z-index: 2;
+    --nw: 468;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.cat_foot1 {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    z-index: 2;
+    --nw: 118;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.cat_foot2 {
+    position: absolute;
+    top: 35%;
+    right: 26%;
+    z-index: 3;
+    --nw: 121;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* 배너문구들 */
+.banner_copy1 {
+    position: absolute;
+    top: 38%;
+    left: 29.5%;
+    z-index: 3;
+    --nw: 476;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.banner_copy2 {
+    position: absolute;
+    top: 40%;
+    left: 31%;
+    z-index: 3;
+    --nw: 445;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.banner_copy3 {
+    position: absolute;
+    top: 45%;
+    left: 41%;
+    z-index: 3;
+    --nw: 206;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* star_1 */
+.star1_1 {
+    position: absolute;
+    top: 24%;
+    left: 1%;
+    z-index: 3;
+    --nw: 100;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.star1_2 {
+    position: absolute;
+    top: 18%;
+    left: 1%;
+    z-index: 3;
+    --nw: 100;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.star1_3 {
+    position: absolute;
+    top: 19%;
+    right: 1%;
+    z-index: 3;
+    --nw: 100;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* star_2 */
+.star2_1 {
+    position: absolute;
+    top: 49%;
+    left: 25%;
+    z-index: 2;
+    --nw: 83;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.star2_2 {
+    position: absolute;
+    top: 49%;
+    right: 25%;
+    z-index: 2;
+    --nw: 83;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* star_3 */
+.star3_1 {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    z-index: 3;
+    --nw: 59;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+.star3_2 {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    z-index: 3;
+    --nw: 59;
+    width: clamp(calc(var(--nw) * var(--min-scale) * 1px), calc(var(--nw) / var(--design-width) * 100vw), calc(var(--nw) * 1px));
+}
+
+/* -------------------------------------------------------
+   미디어쿼리
+------------------------------------------------------- */
+@media screen and (max-width: 1920px) {
+    .main_banner { --min-scale: 0.4; }
+}
+
+@media screen and (max-width: 1440px) {
+    .banner_rainbow {
+        right: -2%;
+        --nw: 1100;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .banner_rainbow {
+        right: -2%;
+        --nw: 1100;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main_banner { --min-scale: 0.3; }
+
+    .banner_icecreams { left: 0%; }
+    .banner_logo_img { left: 4%; }
+    .banner_rainbow {
+        right: 1%;
+        --nw: 1000;
+    }
+    .cloude_1 { left: -10%; }
+    .cloude_2 { right: -3%; }
+    .cat_foot2 { right: 24%; }
+}
+
+
+@media screen and (max-width: 550px) {
+    .banner_rainbow {
+        right: 1%;
+        --nw: 999;
+    }
+    .banner_icecreams { left: -7%; }
+    .cat { left: 28%; }
+}
+
+@media screen and (max-width: 490px) {
+    .cloude_1 { left: -2%; }
+
+    .suting_star1,
+    .suting_star2 {
+        --nw: 300;
+    }
+
+    .suting_star_small_1 {
+        top: 28%;
+        --nw: 200;
+        animation: sutingstar 4s 1s linear infinite;
+    }
+
+    .suting_star_small_2 {
+        top: 35%;
+        --nw: 200;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .main_banner { --min-scale: 0.1; }
+
+    .banner_rainbow {
+        right: 8%;
+        --nw: 980;
+    }
+    .banner_logo_img { left: 1%; }
+    .cloude_2 { right: 3%; }
+    .cat { left: 25%; }
+    .cat_foot1 { left: 20%; }
+    .cat_foot2 { right: 28%; }
+
+    .banner_copy1 { left: 25%; }
+    .banner_copy2 { left: 25.5%; }
+    .banner_copy3 { left: 36%; }
+
+    .star1_1 { left: -2%; }
+    .star2_1 { left: 20%; }
+    .star2_2 { right: 28.5%; }
+    .star3_1 { left: 27%; }
+    .star3_2 { right: 35%; }
+}
+
+@media screen and (max-width: 320px) {
+    .banner_rainbow {
+        right: 16%;
+        --nw: 980;
+    }
+    .cloude_1 {
+        top: 20%;
+        left: 0%;
+        --nw: 380;
+    }
+    .cloude_2 {
+        top: 20%;
+        right: 13%;
+        --nw: 380;
+    }
+}

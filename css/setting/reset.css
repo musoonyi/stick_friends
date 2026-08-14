@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* 여백 초기화-박스크기 계산통일 */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 가로 스크롤 방지 (배너의 % 위치 요소들이 화면 밖으로 나가도 대비) */
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--mainEng-font), var(--mainKor-font), "Noto Sans KR", sans-serif;
+}
+
+/* 링크 초기화 */
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 스타일 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+h2 {
+    padding-top: 80px;
+    font-size: 70px;
+    color: #2CA9C7;
+}
+ul,
+li {
+    list-style: none;
+}
+em,
+address {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+img {
+    vertical-align: top;
+}
+
+figure {
+    margin: 0;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
