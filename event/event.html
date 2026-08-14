@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    
+    <link rel="stylesheet" href="../css/setting/font.css">
+    <link rel="stylesheet" href="../css/setting/reset.css">
+    <link rel="stylesheet" href="../css/setting/vars.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="./eventstyle.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="main_wrap">
+            <header id="header">
+                <div class="header_inner">
+                    <div class="header">
+                        <nav class="nav_left nav">
+                            <ul>
+                                <!-- MENU -> PRODUCT 로 변경, hover 시 카테고리 드롭다운 노출 -->
+                                <li class="has_dropdown">
+                                    <a href="/menu.html">LINEUP</a>
+                                    <ul class="product_dropdown">
+                                        <li><a href="../menu.html?cat=all">ALL</a></li>
+                                        <li><a href="../menu.html?cat=new">NEW</a></li>
+                                        <li><a href="../menu.html?cat=best">BEST</a></li>
+                                        <li><a href="../menu.html?cat=collab">COLLAB</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/brand/brand.html">BRAND</a></li>
+                            </ul>
+                        </nav>
+                        <h1 class="logo">
+                            <a href="/index.html">
+                                <img src="../images/logo.png" alt="로고이미지">
+                            </a>
+                        </h1>
+                        <nav class="nav_right nav">
+                            <ul>
+                                <li><a href="/event/event.html">EVENT</a></li>
+                                <li><a href="/place.html">PLACE</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header_icon">
+                        <div class="MY icon">
+                            <a href="../mypage.html">
+                                <i class="fa-regular fa-circle-user"></i>
+                            </a>
+                        </div>
+                        <nav class="mnav icon">
+                            <a href="#" class="mnav_btn">
+                                <i class="fa-solid fa-paw"></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <nav class="mnav_menu">
+                        <ul>
+                            <!-- 모바일: LINEUP 탭하면 하위 카테고리 펼침/접힘 -->
+                            <li class="mnav_has_dropdown">
+                                <a href="/menu.html" class="mnav_product_link">LINEUP</a>
+                                <ul class="mnav_product_dropdown">
+                                    <li><a href="../menu.html?cat=all">ALL</a></li>
+                                    <li><a href="../menu.html?cat=new">NEW</a></li>
+                                    <li><a href="../menu.html?cat=best">BEST</a></li>
+                                    <li><a href="../menu.html?cat=collab">COLLAB</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/brand/brand.html">BRAND</a></li>
+                            <li><a href="/event/event.html">EVENT</a></li>
+                            <li><a href="/place.html">PLACE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section id="event">
+                <div class="eventinner inner">
+                    <h2 class="event_title">Event</h2>
+                    <ul class="event_tabmenu">
+                        <li class="tab_btn active">진행중인 이벤트</li>
+                        <li class="tab_btn">진행예정 이벤트</li>
+                        <li class="tab_btn">종료된 이벤트</li>
+                        <li class="tab_btn">당첨자 발표</li>
+                    </ul>
+
+                    <div class="event_tab now active">
+                        <div class="event_grid">
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/1.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">여름 한정 썸머 페스티벌 스틱</p>
+                                    <p class="date">2026.07.20 ~ 2026.08.10</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/3.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">스틱프렌즈 해시태그 이벤트</p>
+                                    <p class="date">2026.07.25 ~ 2026.08.05</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/5.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">헬로키티 콜라보 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/6.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">스틱 프렌즈 멤버십 가입 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/4.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">스픽프렌즈 베스트 포토 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/2.jfif" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">신메뉴 구매 시 스탭프 2배 적립 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/7.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">스틱프렌즈X미피 콜라보 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/1+1.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행중</span>
+                                    <p class="title">스틱 프렌즈 1+1 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="event_tab going">
+                       <div class="event_grid">
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/8.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행예정</span>
+                                    <p class="title">여름 한정 썸머 페스티벌 스틱</p>
+                                    <p class="date">2026.07.20 ~ 2026.08.10</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/9.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행예정</span>
+                                    <p class="title">스틱프렌즈 해시태그 이벤트</p>
+                                    <p class="date">2026.07.25 ~ 2026.08.05</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/10.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">진행예정</span>
+                                    <p class="title">헬로키티 콜라보 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event_tab end">
+                        <div class="event_grid">
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/11.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">이벤트 종료</span>
+                                    <p class="title">여름 한정 썸머 페스티벌 스틱</p>
+                                    <p class="date">2026.07.20 ~ 2026.08.10</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/12.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">이벤트 종료</span>
+                                    <p class="title">스틱프렌즈 해시태그 이벤트</p>
+                                    <p class="date">2026.07.25 ~ 2026.08.05</p>
+                                </div>
+                            </div>
+                            <div class="event_card">
+                                <div class="thumb"><img src="../images/event/13.png" alt=""></div>
+                                <div class="info">
+                                    <span class="badge">이벤트 종료</span>
+                                    <p class="title">헬로키티 콜라보 이벤트</p>
+                                    <p class="date">2026.07.15 ~ 2026.08.15</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event_tab winner">
+                        <div class="winner_list">
+                            <div class="winner_item">
+                                <div class="left">
+                                    <span class="badge">발표완료</span>
+                                    <p class="title">6월 해시태그 이벤트 당첨자</p>
+                                </div>
+                                <span class="date">발표일 2026.07.01</span>
+                            </div>
+                            <div class="winner_item">
+                                <div class="left">
+                                    <span class="badge">발표완료</span>
+                                    <p class="title">6월 구매왕 이벤트 당첨자</p>
+                                </div>
+                                <span class="date">발표일 2026.07.01</span>
+                            </div>
+                            <div class="winner_item">
+                                <div class="left">
+                                    <span class="badge">발표완료</span>
+                                    <p class="title">신메뉴 이름 공모 이벤트 당첨자</p>
+                                </div>
+                                <span class="date">발표일 2026.06.10</span>
+                            </div>
+                             <div class="winner_item">
+                                <div class="left">
+                                    <span class="badge">발표완료</span>
+                                    <p class="title">인기 콜라보 투표 이벤트 당첨자</p>
+                                </div>
+                                <span class="date">발표일 2026.06.10</span>
+                            </div>
+                             <div class="winner_item">
+                                <div class="left">
+                                    <span class="badge">발표완료</span>
+                                    <p class="title">5월 구매왕 이벤트 당첨자</p>
+                                </div>
+                                <span class="date">발표일 2026.06.01</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <div class="footer_inner inner">
+                    <nav class="foot_info">
+                        <ul>
+                            <li><a href="javascript:void(0)">채용문의</a></li>
+                            <li><a href="javascript:void(0)">이용약관</a></li>
+                            <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                            <li><a href="javascript:void(0)">영상정보처리기기운영관리방침</a></li>
+                            <li><a href="javascript:void(0)">안전보건 경영방침</a></li>
+                            <li><a href="javascript:void(0)">공정거래자율준수</a></li>
+                        </ul>
+                    </nav>
+                    <div class="foot_logo">
+                        <a href="../index.html"><img src="../images/foot_logo.png" alt="푸터로고"></a>
+                    </div>
+                    <div class="foot_link">
+                        <nav class="foot_nav">
+                            <ul>
+                                <li><a href="../menu.html">제품</a></li>
+                                <li><a href="../brand/brand.html">브랜드</a></li>
+                                <li><a href="../event/event.html">이벤트</a></li>
+                                <li><a href="../place.html">매장</a></li>
+                            </ul>
+                        </nav>
+                        <div class="foot_sns">
+                            <a href="#">
+                                <img src="../images/sns1.png" alt="스틱프렌즈">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="../images/sns2.png" alt="인스타그램">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img src="../images/sns3.png" alt="유튜브">
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <img src="../images/sns4.png" alt="페이스북">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foot_copy">
+                        Copyright © 2026 STICK Company. All Rights Reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/headerMenu.js"></script>
+    <script src="/js/event.js"></script>
+    <script>
+    </script>
+
+
+</body>
+
+</html>
