@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brand</title>
+    <link rel="stylesheet" href="../css/all.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+    <link rel="stylesheet" href="./brandstyle.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="main_wrap">
+            <header id="header">
+                <div class="header_inner inner">
+                    <div class="header">
+                        <nav class="nav_left nav">
+                            <ul>
+                                <!-- MENU -> LINEUP 로 변경, hover 시 카테고리 드롭다운 노출 -->
+                                <li class="has_dropdown">
+                                    <a href="/menu.html">LINEUP</a>
+                                    <ul class="product_dropdown">
+                                        <li><a href="../menu.html?cat=all">ALL</a></li>
+                                        <li><a href="../menu.html?cat=new">NEW</a></li>
+                                        <li><a href="../menu.html?cat=best">BEST</a></li>
+                                        <li><a href="../menu.html?cat=collab">COLLAB</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="brand.html">BRAND</a></li>
+                            </ul>
+                        </nav>
+                        <h1 class="logo">
+                            <a href="/index.html">
+                                <img src="../images/logo.png" alt="로고이미지">
+                            </a>
+                        </h1>
+                        <nav class="nav_right nav">
+                            <ul>
+                                <li><a href="/event/event.html">EVENT</a></li>
+                                <li><a href="/place.html">PLACE</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header_icon">
+                        <div class="MY icon">
+                            <a href="../mypage.html">
+                                <i class="fa-regular fa-circle-user"></i>
+                            </a>
+                        </div>
+                        <nav class="mnav icon">
+                            <a href="#" class="mnav_btn">
+                                <i class="fa-solid fa-paw"></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <nav class="mnav_menu">
+                        <ul>
+                            <!-- 모바일: LINEUP 탭하면 하위 카테고리 펼침/접힘 -->
+                            <li class="mnav_has_dropdown">
+                                <a href="/menu.html" class="mnav_product_link">LINEUP</a>
+                                <ul class="mnav_product_dropdown">
+                                    <li><a href="../menu.html?cat=all">ALL</a></li>
+                                    <li><a href="../menu.html?cat=new">NEW</a></li>
+                                    <li><a href="../menu.html?cat=best">BEST</a></li>
+                                    <li><a href="../menu.html?cat=collab">COLLAB</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/brand/brand.html">BRAND</a></li>
+                            <li><a href="/event/event.html">EVENT</a></li>
+                            <li><a href="/place.html">PLACE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section id="stroy">
+                <div class="storyinner inner">
+                    <div class="story_title">
+                        <h2>Brand stroy</h2>
+                        <p>스틱 프렌즈가 남긴 발자국 이야기 </p>
+                    </div>
+                </div>
+                <article class="first">
+                    <div class="storyinner inner">
+                        <span class="tag reveal">첫번째 이야기</span>
+                        <div class="story_wrap">
+                            <div class="storytxt reveal">
+                                <h3>stick friends</h3>
+                                <p>
+                                    <strong>Stick Friends</strong>는 좋은 원료와 부담을 줄인 달콤함으로<br>
+                                    모두의 하루를 더욱 기분 좋게 만드는 아이스크림 브랜드입니다.
+                                    <br><br>
+                                    신선한 재료가 가진 맛을 소중히 담고,<br>
+                                    누구나 편안하게 즐길 수 있는 부드러운 달콤함을 더했습니다.<br>
+                                    귀여운 친구들과 함께하는 시원한 한 입이 작은 행복이 되길 바랍니다.
+                                </p>
+                            </div>
+                            <div class="storyimg reveal">
+                                <img src="../images/brand/stick1 (13).png" alt="스틱1">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="second">
+                    <div class="storyinner inner">
+                        <span class="tag reveal">두번째 이야기</span>
+                        <div class="storybox_wrap">
+                            <div class="storybox reveal">
+                                <img src="../images/brand/Popsicle.png" alt="아이스크림">
+                                <h3>좋은 원료를 담아</h3>
+                                <p>
+                                    <br>
+                                    국산 원유와 제철 과일로 매달 레시피를 다시 씁니다. <br>
+                                    재료가 정직해야 순간도 정직해지니까요.
+                                </p>
+                            </div>
+                            <div class="storybox reveal">
+                                <img src="../images/brand/Eyes.png" alt="눈">
+                                <h3>부담을 줄인 달콤함</h3>
+                                <p>
+                                    <br>
+                                    달콤함은 그대로, <br>
+                                    부담은 한결 가볍게 즐겨보세요.
+                                </p>
+                            </div>
+                            <div class="storybox reveal">
+                                <img src="../images/brand/Vector.png" alt="하트">
+                                <h3>귀여운 친구들과 함께</h3>
+                                <p>
+                                    <br>
+                                    보기만 해도 웃음이 나는 특별한 아이스크림, <br>
+                                    매일 먹고 싶은 시원하고 기분 좋은 한 입 !
+                                </p>
+                            </div>
+                        </div>
+                </article>
+                <article class="third">
+                    <div class="storyinner inner">
+                        <div class="color_box reveal">
+                            <span class="tag reveal">지금까지의 발자국</span>
+                            <h3>스틱프렌즈의 발자국</h3>
+
+                            <ul class="timeline_list">
+                                <li class="timeline_item reveal">
+                                    <span class="paw"><i class="fa-solid fa-paw"></i></span>
+                                    <div class="timeline_content">
+                                        <h3>2019</h3>
+                                        <p>서울 강서구에서 첫 스틱 아이스크림을 팔기 시작했어요.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline_item reveal">
+                                    <span class="paw"><i class="fa-solid fa-paw"></i></span>
+                                    <div class="timeline_content">
+                                        <h3>2020</h3>
+                                        <p>시그니처 맛 4종을 출시하고, 첫 온라인 매장을 열었습니다.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline_item reveal">
+                                    <span class="paw"><i class="fa-solid fa-paw"></i></span>
+                                    <div class="timeline_content">
+                                        <h3>2022</h3>
+                                        <p>전국 편의점에 입점하고, 스틱프렌즈 멤버십을 시작했어요.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline_item reveal">
+                                    <span class="paw"><i class="fa-solid fa-paw"></i></span>
+                                    <div class="timeline_content">
+                                        <h3>2026</h3>
+                                        <p>여러분과 함께, 새로운 여름을 준비하고 있습니다.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="last">
+                    <div class="storyinner inner">
+                        <span class="tag reveal">지금, 우리는</span>
+                        <div class="last_wrap">
+                            <div class="lasttxt reveal">
+                                <h3>좋은 원료, 부담을 줄인 달콤함. <br>신선한 재료의 맛을 담고, 누구나 편안하게 즐길 수 있는 달콤함을 전합니다.</h3>
+                                <p>
+                                    귀여운 친구들과 함께하는 시원한 한 입으로,
+                                    매일이 조금 더 즐겁고 행복해지는 순간을 선물하겠습니다.
+                                </p>
+                                <div class="last_btns">
+                                    <a href="../menu.html" class="btn">맛 보러가기</a>
+                                    <a href="../place.html" class="btn">매장 찾기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="storyimg2 reveal">
+                            <img src="../images/brand/stick1 (5).png" alt="스틱1">
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <footer id="footer">
+                <div class="footer_inner inner">
+                    <nav class="foot_info">
+                        <ul>
+                            <li><a href="javascript:void(0)">채용문의</a></li>
+                            <li><a href="javascript:void(0)">이용약관</a></li>
+                            <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                            <li><a href="javascript:void(0)">영상정보처리기기운영관리방침</a></li>
+                            <li><a href="javascript:void(0)">안전보건 경영방침</a></li>
+                            <li><a href="javascript:void(0)">공정거래자율준수</a></li>
+                        </ul>
+                    </nav>
+                    <div class="foot_logo">
+                        <a href="#"><img src="../images/foot_logo.png" alt="푸터로고"></a>
+                    </div>
+                    <div class="foot_link">
+                        <nav class="foot_nav">
+                            <ul>
+                                <li><a href="../menu.html">메뉴</a></li>
+                                <li><a href="../brand/brand.html">브랜드</a></li>
+                                <li><a href="../event/event.html">이벤트</a></li>
+                                <li><a href="../place.html">매장</a></li>
+                            </ul>
+                        </nav>
+                        <div class="foot_sns">
+                            <a href="#">
+                                <img src="../images/sns1.png" alt="스틱프렌즈">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="../images/sns2.png" alt="인스타그램">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img src="../images/sns3.png" alt="유튜브">
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <img src="../images/sns4.png" alt="페이스북">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foot_copy">
+                        Copyright © 2026 STICK Company. All Rights Reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./scroll-reveal.js" defer></script>
+    <script src="../js/headerMenu.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
