@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김연경_상세페이지</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+
+    <!-- ============================================================ -->
+    <!-- 공통 헤더 -->
+    <!-- ============================================================ -->
+    <header id="header">
+        <div class="header_inner">
+            <div class="header">
+                <nav class="nav_left nav">
+                    <ul>
+                        <!-- MENU -> LINEUP 로 변경, hover 시 카테고리 드롭다운 노출 -->
+                        <li class="has_dropdown">
+                            <a href="menu.html">LINEUP</a>
+                            <ul class="product_dropdown">
+                                <li><a href="menu.html?cat=all">ALL</a></li>
+                                <li><a href="menu.html?cat=new">NEW</a></li>
+                                <li><a href="menu.html?cat=best">BEST</a></li>
+                                <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="brand/brand.html">BRAND</a></li>
+                    </ul>
+                </nav>
+                <p class="logo">
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="로고이미지">
+                    </a>
+                </p>
+                <nav class="nav_right nav">
+                    <ul>
+                        <li><a href="event/event.html">EVENT</a></li>
+                        <li><a href="place.html">PLACE</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_icon">
+                <div class="MY icon">
+                    <a href="mypage.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div>
+                <nav class="mnav icon">
+                    <a href="#" class="mnav_btn">
+                        <i class="fa-solid fa-paw"></i>
+                    </a>
+                </nav>
+            </div>
+            <nav class="mnav_menu">
+                <ul>
+                    <!-- 모바일: LINEUP 탭하면 하위 카테고리 펼침/접힘 -->
+                    <li class="mnav_has_dropdown">
+                        <a href="menu.html" class="mnav_product_link">LINEUP</a>
+                        <ul class="mnav_product_dropdown">
+                            <li><a href="menu.html?cat=all">ALL</a></li>
+                            <li><a href="menu.html?cat=new">NEW</a></li>
+                            <li><a href="menu.html?cat=best">BEST</a></li>
+                            <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="brand/brand.html">BRAND</a></li>
+                    <li><a href="event/event.html">EVENT</a></li>
+                    <li><a href="place.html">PLACE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 배경 장식 : 아이스크림 아이콘이 서로 다른 시간차로 천천히 떨어지다 사라짐 (1240px 이하에서는 숨김) -->
+    <div class="falling_icons" aria-hidden="true">
+                <img src="./images/ice_icon1.png" alt="" class="falling_icon" style="--x:3%; --duration:10s; --delay:-1s; --drift:18px;">
+                <img src="./images/ice_icon2.png" alt="" class="falling_icon" style="--x:7%; --duration:13s; --delay:-5s; --drift:-22px;">
+                <img src="./images/ice_icon3.png" alt="" class="falling_icon" style="--x:11%; --duration:9s; --delay:-9s; --drift:26px;">
+                <img src="./images/ice_icon4.png" alt="" class="falling_icon" style="--x:90%; --duration:14s; --delay:-3s; --drift:-15px;">
+                <img src="./images/ice_icon5.png" alt="" class="falling_icon" style="--x:94%; --duration:11s; --delay:-7s; --drift:20px;">
+                <img src="./images/ice_icon6.png" alt="" class="falling_icon" style="--x:97%; --duration:16s; --delay:-12s; --drift:-30px;">
+                <img src="./images/ice_icon1.png" alt="" class="falling_icon" style="--x:20%; --duration:12s; --delay:-2s; --drift:15px;">
+                <img src="./images/ice_icon2.png" alt="" class="falling_icon" style="--x:25%; --duration:10s; --delay:-8s; --drift:-18px;">
+                <img src="./images/ice_icon3.png" alt="" class="falling_icon" style="--x:75%; --duration:15s; --delay:0s; --drift:24px;">
+                <img src="./images/ice_icon4.png" alt="" class="falling_icon" style="--x:80%; --duration:9s; --delay:-6s; --drift:-12px;">
+                <img src="./images/ice_icon5.png" alt="" class="falling_icon" style="--x:5%; --duration:13s; --delay:-10s; --drift:28px;">
+                <img src="./images/ice_icon6.png" alt="" class="falling_icon" style="--x:95%; --duration:11s; --delay:-4s; --drift:-20px;">
+                <img src="./images/ice_icon1.png" alt="" class="falling_icon" style="--x:15%; --duration:14s; --delay:-14s; --drift:16px;">
+                <img src="./images/ice_icon2.png" alt="" class="falling_icon" style="--x:85%; --duration:10s; --delay:-1s; --drift:-26px;">
+                <img src="./images/ice_icon3.png" alt="" class="falling_icon" style="--x:9%; --duration:16s; --delay:-9s; --drift:22px;">
+                <img src="./images/ice_icon4.png" alt="" class="falling_icon" style="--x:91%; --duration:12s; --delay:-3s; --drift:-14px;">
+                <img src="./images/ice_icon5.png" alt="" class="falling_icon" style="--x:30%; --duration:9s; --delay:-11s; --drift:30px;">
+                <img src="./images/ice_icon6.png" alt="" class="falling_icon" style="--x:70%; --duration:13s; --delay:-5s; --drift:-19px;">
+    </div>
+
+    <main class="pdp_page">
+        <div class="inner">
+            <div class="pdp_page_box1">
+                <figure class="rep_img">
+                    <img src="./images/icecream1.png" alt="소다맛_이미지">
+                </figure>
+                <article class="product_buy_group">
+
+                    <div class="name_group">
+                        <a href="#" class="name">소다냥</a>
+                        <span class="heart" id="like_btn" role="button" tabindex="0" aria-label="좋아요">
+                            <img src="./images/heart.png" alt="좋아요_아이콘" id="like_icon">
+                        </span>
+                    </div>
+
+                    <em class="prise">1,500원</em>
+
+                    <div class="number_box">
+                        <span><a href="#" class="qty_minus">-</a></span>
+                        <span class="qty_count">1</span>
+                        <span><a href="#" class="qty_plus">+</a></span>
+                    </div>
+
+
+                    <div class="buy_btn_group">
+                        <span class="buy_btn">구매하기</span>
+                        <span class="dibs_btn">장바구니</span>
+                    </div>
+                </article>
+                <figure class="img_group">
+                    <img src="./images/img_1.png" alt="소다맛_이미지1">
+                    <img src="./images/img_2.png" alt="소다맛_이미지2">
+                    <img src="./images/img_3.png" alt="소다맛_이미지3">
+                    <img src="./images/img_4.png" alt="소다맛_이미지4">
+                </figure>
+                <article class="product_info_group">
+                    <figure class="logo_group">
+                        <img src="./images/low_sugar.png" alt="저당_이미지">
+                        <img src="./images/low_cal.png" alt="저칼로리_이미지">
+                        <img src="./images/healthy_.png" alt="건강한_이미지">
+                    </figure>
+
+                    <div class="product_info_text">
+                        냥! 하고 반한 순간,<br>
+                        소다처럼 톡 터지는 달콤함<br>
+                        젤리 발바닥까지 쏙 담은<br>
+                        귀여움은 가득, 부담은 가볍게!<br>
+                        저당·저칼로리로 즐기는<br>
+                        고양이 아이스크림
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="pdp_page_box2">
+                <h1><a href="#"></a></h1>
+
+                <div class="review_info_group">
+                    <article class="box1">
+                        <ul class="star_number">
+                            <strong>모든 리뷰 게이지</strong>
+                            <li class="star_5">
+                                <span class="star_icon"><img src="./images/star_icon5.png" alt="별5"></span>
+                                <span class="gauge"></span>
+                                <em>10</em>
+                            </li>
+                            <li class="star_4">
+                                <span class="star_icon"><img src="./images/star_icon4.png" alt="별4"></span>
+                                <span class="gauge"></span>
+                                <em>10</em>
+                            </li>
+                            <li class="star_3">
+                                <span class="star_icon"><img src="./images/star_icon3.png" alt="별3"></span>
+                                <span class="gauge"></span>
+                                <em>10</em>
+                            </li>
+                            <li class="star_2">
+                                <span class="star_icon"><img src="./images/star_icon2.png" alt="별2"></span>
+                                <span class="gauge"></span>
+                                <em>10</em>
+                            </li>
+                            <li class="star_1">
+                                <span class="star_icon"><img src="./images/star_icon1.png" alt="별1"></span>
+                                <span class="gauge"></span>
+                                <em>10</em>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="box2">
+                        <strong>종합 평가</strong>
+                        <span class="box2_avg">4.5</span>
+                        <span class="box2_stars">
+                            <img src="./images/star_full.png" alt="별이미지">
+                            <img src="./images/star_full.png" alt="별이미지">
+                            <img src="./images/star_full.png" alt="별이미지">
+                            <img src="./images/star_full.png" alt="별이미지">
+                            <img src="./images/star_full.png" alt="별이미지">
+                        </span>
+                        <em class="box2_recommend">10명중 8명이 추천!</em>
+                    </article>
+                    <article class="box3">
+
+                    </article>
+                </div>
+
+                <div class="review_sort">
+                    <details class="review_sort_dropdown">
+                        <summary class="review_sort_summary">최신순</summary>
+                        <ul class="review_sort_menu">
+                            <li><a href="#" data-sort="newest" class="is_active">최신순</a></li>
+                            <li><a href="#" data-sort="oldest">오래된순</a></li>
+                            <li><a href="#" data-sort="ratingHigh">별점높은순</a></li>
+                            <li><a href="#" data-sort="ratingLow">별점낮은순</a></li>
+                        </ul>
+                    </details>
+                </div>
+
+                <!-- 리뷰 카드는 js/reviews.js 의 reviewData 배열을 기반으로
+                     자바스크립트가 여기 안에 동적으로 렌더링합니다. -->
+                <div class="review_group"></div>
+
+                <!-- 리뷰 페이지네이션 (3개씩 보여주기) -->
+                <ul class="review_number_btn_group">
+                    <li><a href="#"><img src="./images/prev_btn.png" alt="prev_icon"></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><img src="./images/next_btn.png" alt="next_icon"></a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- 이미지 확대 모달 (img_group / reviwe_img 공용) -->
+    <div class="img_modal">
+        <div class="img_modal_dim"></div>
+        <div class="img_modal_content">
+            <button type="button" class="img_modal_close" aria-label="닫기">&times;</button>
+            <button type="button" class="img_modal_prev" aria-label="이전 이미지">
+                <img src="./images/prev_icon2.png" alt="" class="nav_icon nav_icon_default">
+                <img src="./images/prev_icon1.png" alt="" class="nav_icon nav_icon_hover">
+            </button>
+            <img src="" alt="" class="img_modal_img">
+            <button type="button" class="img_modal_next" aria-label="다음 이미지">
+                <img src="./images/next_icon2.png" alt="" class="nav_icon nav_icon_default">
+                <img src="./images/next_icon1.png" alt="" class="nav_icon nav_icon_hover">
+            </button>
+            <div class="img_modal_counter"></div>
+        </div>
+    </div>
+
+    <!-- 장바구니 담김 표시 (플로팅 아이콘 + 뱃지) -->
+    <div class="cart_float">
+        <img src="./images/cart_icon.png" alt="장바구니 아이콘" class="cart_float_icon">
+        <span class="cart_float_badge">0</span>
+    </div>
+
+    <!-- 구매하기 상세 모달 -->
+    <div class="buy_modal">
+        <div class="buy_modal_dim"></div>
+        <div class="buy_modal_content">
+            <button type="button" class="buy_modal_close" aria-label="닫기">&times;</button>
+
+            <h2 class="buy_modal_title">구매하기</h2>
+
+            <div class="buy_modal_product">
+                <img src="./images/icecream1.png" alt="소다냥_이미지" class="buy_modal_thumb">
+                <div class="buy_modal_info">
+                    <p class="buy_modal_name">소다냥</p>
+                    <p class="buy_modal_unit_price">1,500원</p>
+                </div>
+            </div>
+
+            <div class="buy_modal_row">
+                <span>수량</span>
+                <span class="buy_modal_qty">1개</span>
+            </div>
+
+            <div class="buy_modal_discount">
+                <p class="discount_label">할인 수단</p>
+
+                <div class="discount_option_group">
+                    <label class="discount_option">
+                        <input type="radio" name="discount_mode" value="none" checked>
+                        <span>사용 안 함</span>
+                    </label>
+                    <label class="discount_option">
+                        <input type="radio" name="discount_mode" value="points">
+                        <span>포인트 사용 <em id="discount_points_available">(0pt 보유)</em></span>
+                    </label>
+                    <label class="discount_option">
+                        <input type="radio" name="discount_mode" value="coupon">
+                        <span>쿠폰 사용</span>
+                    </label>
+                </div>
+
+                <select id="discount_coupon_select" class="discount_coupon_select" hidden>
+                    <option value="">사용할 쿠폰을 선택해주세요</option>
+                </select>
+            </div>
+
+            <div class="buy_modal_row">
+                <span>상품 금액</span>
+                <span class="buy_modal_subtotal">1,500원</span>
+            </div>
+
+            <div class="buy_modal_row buy_modal_discount_row">
+                <span>할인 금액</span>
+                <span class="buy_modal_discount_price">-0원</span>
+            </div>
+
+            <div class="buy_modal_row buy_modal_total">
+                <span>총 결제 금액</span>
+                <span class="buy_modal_total_price">1,500원</span>
+            </div>
+
+            <button type="button" class="buy_modal_confirm">결제하기</button>
+        </div>
+    </div>
+
+    <!-- 장바구니 수량 조절 모달 -->
+    <div class="cart_modal">
+        <div class="cart_modal_dim"></div>
+        <div class="cart_modal_content">
+            <button type="button" class="cart_modal_close" aria-label="닫기">&times;</button>
+
+            <h2 class="cart_modal_title">장바구니</h2>
+
+            <div class="cart_modal_product">
+                <img src="./images/icecream1.png" alt="소다냥_이미지" class="cart_modal_thumb">
+                <div class="cart_modal_info">
+                    <p class="cart_modal_name">소다냥</p>
+                    <p class="cart_modal_unit_price">1,500원</p>
+                </div>
+            </div>
+
+            <div class="cart_modal_qty_box">
+                <button type="button" class="cart_modal_minus" aria-label="수량 줄이기">-</button>
+                <span class="cart_modal_qty_count">0</span>
+                <button type="button" class="cart_modal_plus" aria-label="수량 늘리기">+</button>
+            </div>
+
+            <div class="cart_modal_row cart_modal_total">
+                <span>총 금액</span>
+                <span class="cart_modal_total_price">0원</span>
+            </div>
+
+            <div class="cart_modal_actions">
+                <button type="button" class="cart_modal_btn cart_modal_btn_ghost cart_modal_confirm">확인</button>
+                <button type="button" class="cart_modal_btn cart_modal_btn_primary cart_modal_buy">구매하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 공통 푸터 -->
+    <!-- ============================================================ -->
+    <footer id="footer">
+        <div class="footer_inner">
+            <nav class="foot_info">
+                <ul>
+                    <li><a href="javascript:void(0)">채용문의</a></li>
+                    <li><a href="javascript:void(0)">이용약관</a></li>
+                    <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                    <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                    <li><a href="javascript:void(0)">영상정보처리기기운영관리방침</a></li>
+                    <li><a href="javascript:void(0)">안전보건 경영방침</a></li>
+                    <li><a href="javascript:void(0)">공정거래자율준수</a></li>
+                </ul>
+            </nav>
+            <div class="foot_logo">
+                <a href="#"><img src="./images/foot_logo.png" alt="푸터로고"></a>
+            </div>
+            <div class="foot_link">
+                <nav class="foot_nav">
+                    <ul>
+                        <li><a href="./menu.html">제품</a></li>
+                        <li><a href="./brand/brand.html">브랜드</a></li>
+                        <li><a href="./event/event.html">이벤트</a></li>
+                        <li><a href="./place.html">매장</a></li>
+                    </ul>
+                </nav>
+                <div class="foot_sns">
+                    <a href="#">
+                        <img src="./images/sns1.png" alt="스틱프렌즈">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="./images/sns2.png" alt="인스타그램">
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <img src="./images/sns3.png" alt="유튜브">
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <img src="./images/sns4.png" alt="페이스북">
+                    </a>
+                </div>
+            </div>
+            <div class="foot_copy">
+                Copyright © 2026 STICK Company. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./js/headerMenu.js"></script>
+    <script src="./js/detail.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

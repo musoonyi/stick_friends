@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매장찾기</title>
+    <link rel="stylesheet" href="./css/section/storemap.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+</head>
+<body>
+    <section id="storemap">
+        <div class="storemap_inner inner">
+            <header id="header">
+                <div class="header_inner inner">
+                    <div class="header">
+                        <nav class="nav_left nav">
+                            <ul>
+                                <!-- MENU -> LINEUP 로 변경, hover 시 카테고리 드롭다운 노출 -->
+                                <li class="has_dropdown">
+                                    <a href="menu.html">LINEUP</a>
+                                    <ul class="product_dropdown">
+                                        <li><a href="menu.html?cat=all">ALL</a></li>
+                                        <li><a href="menu.html?cat=new">NEW</a></li>
+                                        <li><a href="menu.html?cat=best">BEST</a></li>
+                                        <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="brand/brand.html">BRAND</a></li>
+                            </ul>
+                        </nav>
+                        <h1 class="logo">
+                            <a href="./index.html">
+                                <img src="./images/logo.png" alt="로고이미지">
+                            </a>
+                        </h1>
+                        <nav class="nav_right nav">
+                            <ul>
+                                <li><a href="event/event.html">EVENT</a></li>
+                                <li><a href="place.html">PLACE</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header_icon">
+                        <div class="MY icon">
+                            <a href="mypage.html">
+                                <i class="fa-regular fa-circle-user"></i>
+                            </a>
+                        </div>
+                        <nav class="mnav icon">
+                            <a href="#" class="mnav_btn">
+                                <i class="fa-solid fa-paw"></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <nav class="mnav_menu">
+                        <ul>
+                            <!-- 모바일: LINEUP 탭하면 하위 카테고리 펼침/접힘 -->
+                            <li class="mnav_has_dropdown">
+                                <a href="menu.html" class="mnav_product_link">LINEUP</a>
+                                <ul class="mnav_product_dropdown">
+                                    <li><a href="menu.html?cat=all">ALL</a></li>
+                                    <li><a href="menu.html?cat=new">NEW</a></li>
+                                    <li><a href="menu.html?cat=best">BEST</a></li>
+                                    <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="brand/brand.html">BRAND</a></li>
+                            <li><a href="event/event.html">EVENT</a></li>
+                            <li><a href="place.html">PLACE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="map">
+                <div id="map"></div>
+                <div class="mapBox">
+                    <h3 class="map_tit">STORE</h3>
+                    <div class="mapLocation">
+                        <!-- 도/시 -->
+                        <div class="selectBox">
+                            <div class="button_wrap">
+                                <button type="button" class="state">
+                                    <span>도/시 선택</span>
+                                </button>
+                                <ul class="stateList"></ul>
+                                <button type="button" class="city" disabled>
+                                    <span>구/군 선택</span>
+                                </button>
+                                <ul class="cityList"></ul>
+                            </div>
+                        </div>
+                        <!-- 동 -->
+                        <div class="selectBox">
+                            <button type="button" class="town" disabled>
+                                <span>동 선택</span>
+                            </button>
+                            <ul class="townList"></ul>
+                        </div>
+                        <!-- 검색 -->
+                        <div class="selectBox">
+                            <button type="button" class="search" disabled>
+                                검색
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="placePR">
+                <div class="placePR_btn">매장프로모션</div>
+                <div class="placePR_view">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/mapPR1.png" alt="매장프로모션이미지1">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/mapPR2.png" alt="매장프로모션이미지2">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/mapPR3.png" alt="매장프로모션이미지3">
+                                </a>    
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                <img src="./images/mapPR4.png" alt="매장프로모션이미지4">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="footer_inner inner">
+                    <nav class="foot_info">
+                        <ul>
+                            <li><a href="javascript:void(0)">채용문의</a></li>
+                            <li><a href="javascript:void(0)">이용약관</a></li>
+                            <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                            <li><a href="javascript:void(0)">영상정보처리기기운영관리방침</a></li>
+                            <li><a href="javascript:void(0)">안전보건 경영방침</a></li>
+                            <li><a href="javascript:void(0)">공정거래자율준수</a></li>
+                        </ul>
+                    </nav>
+                    <div class="foot_logo">
+                        <a href="#"><img src="./images/foot_logo.png" alt="푸터로고"></a>
+                    </div>
+                    <div class="foot_link">
+                        <nav class="foot_nav">
+                            <ul>
+                                <li><a href="./menu.html">메뉴</a></li>
+                                <li><a href="./brand/brand.html">브랜드</a></li>
+                                <li><a href="./event/event.html">이벤트</a></li>
+                                <li><a href="./place.html">매장</a></li>
+                            </ul>
+                        </nav>
+                        <div class="foot_sns">
+                            <a href="#">
+                                <img src="./images/sns1.png" alt="스틱프렌즈">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="./images/sns2.png" alt="인스타그램">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img src="./images/sns3.png" alt="유튜브">
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <img src="./images/sns4.png" alt="페이스북">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foot_copy">
+                        Copyright © 2026 STICK Company. All Rights Reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+<script src="./js/locationData.js"></script>
+<script src="./js/headerMenu.js"></script>
+<script src="./js/place.js"></script>
+
+<script>
+</script>
+
+</html>

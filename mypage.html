@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지01_20260730</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/all.css">
+
+
+</head>
+
+<body>
+
+    <!-- ============================================================ -->
+    <!-- 공통 헤더 -->
+    <!-- ============================================================ -->
+    <header id="header">
+        <div class="header_inner">
+            <div class="header">
+                <nav class="nav_left nav">
+                    <ul>
+                        <!-- MENU -> LINEUP 로 변경, hover 시 카테고리 드롭다운 노출 -->
+                        <li class="has_dropdown">
+                            <a href="menu.html">LINEUP</a>
+                            <ul class="product_dropdown">
+                                <li><a href="menu.html?cat=all">ALL</a></li>
+                                <li><a href="menu.html?cat=new">NEW</a></li>
+                                <li><a href="menu.html?cat=best">BEST</a></li>
+                                <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="brand/brand.html">BRAND</a></li>
+                    </ul>
+                </nav>
+                <p class="logo">
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="로고이미지">
+                    </a>
+                </p>
+                <nav class="nav_right nav">
+                    <ul>
+                        <li><a href="event/event.html">EVENT</a></li>
+                        <li><a href="place.html">PLACE</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_icon">
+                <div class="MY icon">
+                    <a href="mypage.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div>
+                <nav class="mnav icon">
+                    <a href="#" class="mnav_btn">
+                        <i class="fa-solid fa-paw"></i>
+                    </a>
+                </nav>
+            </div>
+            <nav class="mnav_menu">
+                <ul>
+                    <!-- 모바일: LINEUP 탭하면 하위 카테고리 펼침/접힘 -->
+                    <li class="mnav_has_dropdown">
+                        <a href="menu.html" class="mnav_product_link">LINEUP</a>
+                        <ul class="mnav_product_dropdown">
+                            <li><a href="menu.html?cat=all">ALL</a></li>
+                            <li><a href="menu.html?cat=new">NEW</a></li>
+                            <li><a href="menu.html?cat=best">BEST</a></li>
+                            <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="brand/brand.html">BRAND</a></li>
+                    <li><a href="event/event.html">EVENT</a></li>
+                    <li><a href="place.html">PLACE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 배경 장식 : 아이스크림 아이콘이 서로 다른 시간차로 천천히 떨어지다 사라짐 (1240px 이하에서는 숨김) -->
+    <div class="falling_icons" aria-hidden="true">
+        <img src="./images/ice_icon1.png" alt="" class="falling_icon"
+            style="--x:3%; --duration:10s; --delay:-1s; --drift:18px;">
+        <img src="./images/ice_icon2.png" alt="" class="falling_icon"
+            style="--x:7%; --duration:13s; --delay:-5s; --drift:-22px;">
+        <img src="./images/ice_icon3.png" alt="" class="falling_icon"
+            style="--x:11%; --duration:9s; --delay:-9s; --drift:26px;">
+        <img src="./images/ice_icon4.png" alt="" class="falling_icon"
+            style="--x:90%; --duration:14s; --delay:-3s; --drift:-15px;">
+        <img src="./images/ice_icon5.png" alt="" class="falling_icon"
+            style="--x:94%; --duration:11s; --delay:-7s; --drift:20px;">
+        <img src="./images/ice_icon6.png" alt="" class="falling_icon"
+            style="--x:97%; --duration:16s; --delay:-12s; --drift:-30px;">
+        <img src="./images/ice_icon1.png" alt="" class="falling_icon"
+            style="--x:20%; --duration:12s; --delay:-2s; --drift:15px;">
+        <img src="./images/ice_icon2.png" alt="" class="falling_icon"
+            style="--x:25%; --duration:10s; --delay:-8s; --drift:-18px;">
+        <img src="./images/ice_icon3.png" alt="" class="falling_icon"
+            style="--x:75%; --duration:15s; --delay:0s; --drift:24px;">
+        <img src="./images/ice_icon4.png" alt="" class="falling_icon"
+            style="--x:80%; --duration:9s; --delay:-6s; --drift:-12px;">
+        <img src="./images/ice_icon5.png" alt="" class="falling_icon"
+            style="--x:5%; --duration:13s; --delay:-10s; --drift:28px;">
+        <img src="./images/ice_icon6.png" alt="" class="falling_icon"
+            style="--x:95%; --duration:11s; --delay:-4s; --drift:-20px;">
+        <img src="./images/ice_icon1.png" alt="" class="falling_icon"
+            style="--x:15%; --duration:14s; --delay:-14s; --drift:16px;">
+        <img src="./images/ice_icon2.png" alt="" class="falling_icon"
+            style="--x:85%; --duration:10s; --delay:-1s; --drift:-26px;">
+        <img src="./images/ice_icon3.png" alt="" class="falling_icon"
+            style="--x:9%; --duration:16s; --delay:-9s; --drift:22px;">
+        <img src="./images/ice_icon4.png" alt="" class="falling_icon"
+            style="--x:91%; --duration:12s; --delay:-3s; --drift:-14px;">
+        <img src="./images/ice_icon5.png" alt="" class="falling_icon"
+            style="--x:30%; --duration:9s; --delay:-11s; --drift:30px;">
+        <img src="./images/ice_icon6.png" alt="" class="falling_icon"
+            style="--x:70%; --duration:13s; --delay:-5s; --drift:-19px;">
+    </div>
+
+    <main class="mypage">
+        <div class="inner">
+
+            <div class="title">
+                <h1><a href="#"><img src="./images/mypage.png" alt="마이페이지_타이틀"></a></h1>
+                <div class="title_icon_group">
+                    <span class="alarm" id="alarm_btn">
+                        <a href="#" id="alarm_link" aria-label="알림 확인">
+                            <img src="./images/alarm_icon.png" alt="알림_아이콘">
+                            <span class="alarm_badge" id="alarm_badge">!</span>
+                        </a>
+                    </span>
+                    <span class="option" id="option_btn">
+                        <a href="#" id="option_link" aria-label="테마 색상 설정">
+                            <img src="./images/option_아이콘.png" alt="설정_아이콘">
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 개인정보박스 -->
+            <article class="my_box">
+                <figure class="profile_img" id="profile_img_box">
+                    <img src="./images/icecream1.png" alt="프로필_이미지" id="profile_img">
+                    <button type="button" class="profile_img_edit" id="profile_img_edit_btn" aria-label="프로필 이미지 변경">
+                        <img src="./images/camera.png" alt="프로필_이미지_변경_아이콘">
+                    </button>
+                </figure>
+                <input type="file" accept="image/*" id="profile_img_input" hidden>
+
+                <div class="profile_info">
+                    <a href="#" class="name">하드냥 <em class="nim">님</em></a>
+                    <strong class="rank">플래티넘 등급</strong>
+                    <p class="copy">어서오세요 오늘도 달콤한 하루 되세요!</p>
+                </div>
+
+                <section class="span_group">
+                    <span class="point">
+                        <a href="#">POINT</a>
+
+                        <div class="number_group number_group1">
+                            <strong id="user_points_display">1,000</strong> pt
+                        </div>
+                    </span>
+
+                    <span class="coupon">
+                        <a href="#">COUPON</a>
+
+                        <div class="number_group number_group2">
+                            <strong id="coupon_count">3개</strong>
+                            <em>(사용가능한 쿠폰)</em>
+                        </div>
+                    </span>
+                </section>
+            </article>
+
+            <!-- 스탬프박스 -->
+            <article class="my_stamp">
+                <div class="box_1">
+                    <h3 class="box_title">MY STAMP</h3>
+                    <a href="#" data-modal-open="modal_stamp_history">적립내역 ></a>
+                </div>
+
+                <div class="box_2">
+                    <p class="box_text"><span>7</span>/8 모았어요!</p>
+                    <p class="box_text">앞으로 한 개 더 모으면 완료!</p>
+                </div>
+
+                <figure class="stamp_group">
+                    <div class="stamp"><img src="./images/stamp_img.png" alt="스탬프_이미지"></div>
+                    <div class="stamp"><img src="./images/stamp_img.png" alt="스탬프_이미지"></div>
+                    <div class="stamp"><img src="./images/stamp_img.png" alt="스탬프_이미지"></div>
+                    <div class="stamp"><img src="./images/stamp_img.png" alt="스탬프_이미지"></div>
+                    <div class="stamp"><img src="./images/stamp_img.png" alt="스탬프_이미지"></div>
+                    <div class="stamp"><img src="./images/stamp_img.png" alt="스탬프_이미지"></div>
+                    <div class="stamp"><img src="./images/stamp_img.png" alt="스탬프_이미지"></div>
+                    <div class="stamp stamp_empty"><img src="./images/no_stmap_img.png" alt="스탬프_이미지"></div>
+                </figure>
+
+                <span class="stamp_copy">고양이 젤리 발바닥 스티커를 8개 모두 모으면 특별 할인 혜택을 드려요!</span>
+
+            </article>
+
+            <!-- 최근 구매내역 -->
+            <article class="my_recent">
+                <h3 class="box_title">MY ORDER</h3>
+                <p class="box_text">최근에 구매하신 아이스크림 내역이에요!</p>
+
+                <div class="recent_group" id="recent_group"></div>
+            </article>
+
+            <!-- 좋아하는 아이스크림 -->
+            <article class="my_favorit collapsible">
+                <div class="toggle_header">
+                    <h3 class="box_title toggle_title">
+                        MY FAVORITE
+                        <span class="toggle_arrow">▼</span>
+                    </h3>
+                    <p class="toggle_hint">클릭하시면 내용을 보여드립니다</p>
+                </div>
+
+                <div class="collapsible_content">
+                    <div class="collapsible_inner">
+                        <p class="box_text">좋아하는 아이스크림을 저장했습니다!</p>
+
+                        <div class="swiper favoriteSwiper">
+
+                            <div class="swiper-wrapper"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 쿠폰박스 -->
+            <article class="my_coupon collapsible">
+                <div class="toggle_header">
+                    <h3 class="box_title toggle_title">
+                        MY COUPON
+                        <span class="toggle_arrow">▼</span>
+                    </h3>
+                    <p class="toggle_hint">클릭하시면 내용을 보여드립니다</p>
+                </div>
+
+                <div class="collapsible_content">
+                    <div class="collapsible_inner">
+                        <p class="box_text">보유하고 계신 쿠폰들입니다 유효기간을 꼭 확인해주세요!</p>
+
+                        <div class="swiper couponSwiper">
+
+                            <div class="swiper-wrapper"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 리뷰관리 -->
+            <article class="my_review collapsible">
+                <div class="toggle_header">
+                    <h3 class="box_title toggle_title">
+                        MY REVIEW
+                        <span class="toggle_arrow">▼</span>
+                    </h3>
+                    <p class="toggle_hint">클릭하시면 내용을 보여드립니다</p>
+                </div>
+
+                <div class="collapsible_content">
+                    <div class="collapsible_inner">
+                        <p class="box_text">내가 쓴 리뷰들을 관리 할 수 있습니다!</p>
+
+                        <div class="review_search">
+                            <div class="review_search_box">
+                                <input type="text" id="review_search_input" placeholder="키워드로 리뷰 검색 (예: 소다냥)">
+                                <button type="button" id="review_search_clear" aria-label="검색어 지우기">&times;</button>
+                            </div>
+                            <div class="review_search_tags" id="review_search_tags">
+                                <button type="button" class="review_tag_btn" data-keyword="소다냥">소다냥</button>
+                                <button type="button" class="review_tag_btn" data-keyword="딸기냥">딸기냥</button>
+                                <button type="button" class="review_tag_btn" data-keyword="레몬냥">레몬냥</button>
+                                <button type="button" class="review_tag_btn" data-keyword="청포도냥">청포도냥</button>
+                                <button type="button" class="review_tag_btn" data-keyword="포도냥">포도냥</button>
+                                <button type="button" class="review_tag_btn" data-keyword="오렌지냥">오렌지냥</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper reviewSwiper">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 버튼그룹 -->
+            <article class="my_btn">
+                <button type="button" data-modal-open="modal_info">개인정보변경</button>
+                <button type="button" data-modal-open="modal_payment">결제수단변경</button>
+                <button type="button" data-modal-open="modal_inquiry">1:1 개인문의</button>
+                <button type="button" data-modal-open="modal_withdraw">회원탈퇴하기</button>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- 모달 6종 -->
+    <!-- ============================================================ -->
+
+    <!-- 개인정보변경 모달 -->
+    <div class="modal_overlay" id="modal_info">
+        <div class="modal_box">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">개인정보변경</h3>
+            <p class="modal_desc">이름, 주소지, 전화번호를 안전하게 수정할 수 있어요!</p>
+
+            <form class="modal_form">
+                <label for="user_name">이름</label>
+                <input type="text" id="user_name" name="user_name" placeholder="이름을 입력해주세요">
+
+                <label for="user_email">이메일</label>
+                <input type="email" id="user_email" name="user_email" placeholder="이메일을 입력해주세요">
+
+                <label for="user_address">주소지</label>
+                <input type="text" id="user_address" name="user_address" placeholder="주소를 입력해주세요">
+
+                <label for="user_phone">전화번호</label>
+                <input type="tel" id="user_phone" name="user_phone" placeholder="'-' 없이 입력해주세요">
+
+                <div class="modal_btn_group">
+                    <button type="button" class="btn_cancel" data-modal-close>취소</button>
+                    <button type="submit" class="btn_confirm">저장하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 결제수단변경 모달 -->
+    <div class="modal_overlay" id="modal_payment">
+        <div class="modal_box">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">결제수단변경</h3>
+            <p class="modal_desc">계좌번호와 카드 정보를 변경할 수 있어요!</p>
+
+            <form class="modal_form">
+                <label for="user_account">계좌번호</label>
+                <input type="text" id="user_account" name="user_account" placeholder="은행명 + 계좌번호를 입력해주세요">
+
+                <label for="user_card">카드번호</label>
+                <input type="text" id="user_card" name="user_card" placeholder="카드번호를 입력해주세요">
+
+                <div class="modal_btn_group">
+                    <button type="button" class="btn_cancel" data-modal-close>취소</button>
+                    <button type="submit" class="btn_confirm">저장하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 1:1 개인문의 모달 -->
+    <div class="modal_overlay" id="modal_inquiry">
+        <div class="modal_box">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">1:1 개인문의</h3>
+            <p class="modal_desc">궁금하신 점을 남겨주시면 빠르게 답변드릴게요!</p>
+
+            <form class="modal_form" id="inquiry_form">
+                <label for="inquiry_title">제목</label>
+                <input type="text" id="inquiry_title" name="inquiry_title" placeholder="제목을 입력해주세요">
+
+                <label for="inquiry_content">문의내용</label>
+                <textarea id="inquiry_content" name="inquiry_content" rows="5"
+                    placeholder="문의하실 내용을 자세히 적어주세요"></textarea>
+
+                <div class="modal_btn_group">
+                    <button type="button" class="btn_cancel" data-modal-close>취소</button>
+                    <button type="submit" class="btn_confirm">문의하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 회원탈퇴 모달 -->
+    <div class="modal_overlay" id="modal_withdraw">
+        <div class="modal_box modal_box_small">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">회원탈퇴</h3>
+            <p class="modal_desc">정말 탈퇴하시겠어요?<br>탈퇴 시 포인트, 쿠폰, 스탬프가<br> 모두 사라져요 :(</p>
+
+            <div class="modal_btn_group">
+                <button type="button" class="btn_cancel" data-modal-close>취소</button>
+                <button type="button" class="btn_danger" id="withdraw_confirm">탈퇴하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 리뷰 수정 모달 -->
+    <div class="modal_overlay" id="modal_review_edit">
+        <div class="modal_box">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">리뷰 수정</h3>
+            <p class="modal_desc">사진, 별점, 내용을 수정할 수 있어요!</p>
+
+            <form class="modal_form" id="review_edit_form">
+
+                <div class="review_edit_preview">
+                    <img id="review_edit_preview_img" src="" alt="리뷰 사진 미리보기">
+                </div>
+
+                <button type="button" class="file_label" id="review_edit_photo_btn">사진 변경하기</button>
+                <input type="file" id="review_edit_photo" name="review_edit_photo" accept="image/*" hidden>
+
+                <label>별점</label>
+                <div class="star_picker" id="review_edit_stars">
+                    <button type="button" class="star_btn" data-star="1"><img src="./images/star_full.png"
+                            alt="별점 1"></button>
+                    <button type="button" class="star_btn" data-star="2"><img src="./images/star_full.png"
+                            alt="별점 2"></button>
+                    <button type="button" class="star_btn" data-star="3"><img src="./images/star_full.png"
+                            alt="별점 3"></button>
+                    <button type="button" class="star_btn" data-star="4"><img src="./images/star_full.png"
+                            alt="별점 4"></button>
+                    <button type="button" class="star_btn" data-star="5"><img src="./images/star_full.png"
+                            alt="별점 5"></button>
+                </div>
+
+                <label for="review_edit_keyword">검색 키워드</label>
+                <select id="review_edit_keyword" name="review_edit_keyword">
+                    <option value="소다냥">소다냥</option>
+                    <option value="딸기냥">딸기냥</option>
+                    <option value="레몬냥">레몬냥</option>
+                    <option value="청포도냥">청포도냥</option>
+                    <option value="포도냥">포도냥</option>
+                    <option value="오렌지냥">오렌지냥</option>
+                </select>
+
+                <label for="review_edit_content">내용</label>
+                <textarea id="review_edit_content" name="review_edit_content" rows="4"></textarea>
+
+                <div class="modal_btn_group">
+                    <button type="button" class="btn_cancel" data-modal-close>취소</button>
+                    <button type="submit" class="btn_confirm">저장하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 리뷰 삭제 확인 모달 -->
+    <div class="modal_overlay" id="modal_review_delete">
+        <div class="modal_box modal_box_small">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">리뷰 삭제</h3>
+            <p class="modal_desc">정말 삭제하시겠습니까?<br>삭제하시면 복구가 되지 않습니다.</p>
+
+            <div class="modal_btn_group">
+                <button type="button" class="btn_cancel" data-modal-close>취소하기</button>
+                <button type="button" class="btn_danger" id="review_delete_confirm">삭제하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1:1 문의 답변(알림) 모달 -->
+    <div class="modal_overlay" id="modal_reply">
+        <div class="modal_box">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">1:1 문의 답변</h3>
+            <p class="modal_desc">문의하신 내용에 대한 답변이에요!</p>
+
+            <div class="reply_list" id="reply_list">
+                <p class="reply_empty">아직 도착한 답변이 없어요.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 적립내역 모달 -->
+    <div class="modal_overlay" id="modal_stamp_history">
+        <div class="modal_box">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">적립내역</h3>
+            <p class="modal_desc">아이스크림을 구매하고 리뷰를 작성하면 스탬프 1개가 적립돼요!</p>
+
+            <div class="stamp_history_list" id="stamp_history_list">
+                <p class="stamp_history_empty">아직 적립된 스탬프가 없어요.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 테마 색상 설정 모달 -->
+    <div class="modal_overlay" id="modal_theme">
+        <div class="modal_box modal_box_small">
+            <button type="button" class="modal_close" data-modal-close aria-label="닫기">&times;</button>
+
+            <h3 class="modal_title">테마 색상 설정</h3>
+            <p class="modal_desc">마이페이지의 보더와 박스 색상을 원하는 색으로 바꿔보세요!</p>
+
+            <div class="theme_swatch_group">
+                <button type="button" class="theme_swatch" data-theme="blue" aria-label="하늘색 테마">
+                    <span class="swatch_circle swatch_blue"></span>
+                    <em>하늘색</em>
+                </button>
+                <button type="button" class="theme_swatch" data-theme="pink" aria-label="분홍색 테마">
+                    <span class="swatch_circle swatch_pink"></span>
+                    <em>분홍색</em>
+                </button>
+                <button type="button" class="theme_swatch" data-theme="yellow" aria-label="노랑색 테마">
+                    <span class="swatch_circle swatch_yellow"></span>
+                    <em>노랑색</em>
+                </button>
+                <button type="button" class="theme_swatch" data-theme="green" aria-label="연두색 테마">
+                    <span class="swatch_circle swatch_green"></span>
+                    <em>연두색</em>
+                </button>
+                <button type="button" class="theme_swatch" data-theme="orange" aria-label="주황색 테마">
+                    <span class="swatch_circle swatch_orange"></span>
+                    <em>주황색</em>
+                </button>
+                <button type="button" class="theme_swatch" data-theme="purple" aria-label="보라색 테마">
+                    <span class="swatch_circle swatch_purple"></span>
+                    <em>보라색</em>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 공통 푸터 -->
+    <!-- ============================================================ -->
+    <footer id="footer">
+        <div class="footer_inner">
+            <nav class="foot_info">
+                <ul>
+                    <li><a href="javascript:void(0)">채용문의</a></li>
+                    <li><a href="javascript:void(0)">이용약관</a></li>
+                    <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                    <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                    <li><a href="javascript:void(0)">영상정보처리기기운영관리방침</a></li>
+                    <li><a href="javascript:void(0)">안전보건 경영방침</a></li>
+                    <li><a href="javascript:void(0)">공정거래자율준수</a></li>
+                </ul>
+            </nav>
+            <div class="foot_logo">
+                <a href="#"><img src="./images/foot_logo.png" alt="푸터로고"></a>
+            </div>
+            <div class="foot_link">
+                <nav class="foot_nav">
+                    <ul>
+                        <li><a href="./menu.html">메뉴</a></li>
+                        <li><a href="./brand/brand.html">브랜드</a></li>
+                        <li><a href="./event/event.html">이벤트</a></li>
+                        <li><a href="./place.html">매장</a></li>
+                    </ul>
+                </nav>
+                <div class="foot_sns">
+                    <a href="#">
+                        <img src="./images/sns1.png" alt="스틱프렌즈">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="./images/sns2.png" alt="인스타그램">
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <img src="./images/sns3.png" alt="유튜브">
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <img src="./images/sns4.png" alt="페이스북">
+                    </a>
+                </div>
+            </div>
+            <div class="foot_copy">
+                Copyright © 2026 STICK Company. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./js/headerMenu.js"></script>
+    <script src="./js/mypage.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스틱프렌즈</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/goods.css">
+</head>
+<body>
+    <main id="main">
+        <div class="main_wrap">
+            <header id="header">
+                <div class="header_inner inner">
+                    <div class="header">
+                        <nav class="nav_left nav">
+                            <ul>
+                                <!-- MENU -> LINEUP 로 변경, hover 시 카테고리 드롭다운 노출 -->
+                                <li class="has_dropdown">
+                                    <a href="./menu.html">LINEUP</a>
+                                    <ul class="product_dropdown">
+                                        <li><a href="menu.html?cat=all">ALL</a></li>
+                                        <li><a href="menu.html?cat=new">NEW</a></li>
+                                        <li><a href="menu.html?cat=best">BEST</a></li>
+                                        <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="brand/brand.html">BRAND</a></li>
+                            </ul>
+                        </nav>
+                        <h1 class="logo">
+                            <a href="./index.html">
+                                <img src="./images/logo.png" alt="로고이미지">
+                            </a>
+                        </h1>
+                        <nav class="nav_right nav">
+                            <ul>
+                                <li><a href="event/event.html">EVENT</a></li>
+                                <li><a href="place.html">PLACE</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header_icon">
+                        <div class="MY icon">
+                            <a href="mypage.html">
+                                <i class="fa-regular fa-circle-user"></i>
+                            </a>
+                        </div>
+                        <nav class="mnav icon">
+                            <a href="#" class="mnav_btn">
+                                <i class="fa-solid fa-paw"></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <nav class="mnav_menu">
+                        <ul>
+                            <!-- 모바일: LINEUP 탭하면 하위 카테고리 펼침/접힘 -->
+                            <li class="mnav_has_dropdown">
+                                <a href="menu.html" class="mnav_product_link">LINEUP</a>
+                                <ul class="mnav_product_dropdown">
+                                    <li><a href="menu.html?cat=all">ALL</a></li>
+                                    <li><a href="menu.html?cat=new">NEW</a></li>
+                                    <li><a href="menu.html?cat=best">BEST</a></li>
+                                    <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="brand/brand.html">BRAND</a></li>
+                            <li><a href="event/event.html">EVENT</a></li>
+                            <li><a href="place.html">PLACE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <section id="banner">
+                <div class="main_banner">
+                    <div class="inner">
+                        <div class="banner_rainbow">
+                            <img src="./images/rainbow.png" alt="배너_레인보우">
+                        </div>
+
+                        <div class="banner_icecreams">
+                            <img src="./images/icecreams_banner_img.png" alt="배너_아이스크림들_이미지">
+                        </div>
+
+                        <div class="colude cloude_1">
+                            <img src="./images/cloude.png" alt="왼쪽_구름_이미지">
+                        </div>
+                        <div class="colude cloude_2">
+                            <img src="./images/cloude.png" alt="오른쪽_구름_이미지">
+                        </div>
+                        <div class="colude cloude_3">
+                            <img src="./images/samll_colude.png" alt="오른쪽_작은_구름_이미지">
+                        </div>
+                        <div class="colude cloude_4">
+                            <img src="./images/samll_colude.png" alt="왼쪽_작은_구름_이미지">
+                        </div>
+
+                        <div class="banner_logo_img">
+                            <img src="./images/banner_logo_img.png" alt="배너_로고_이미지">
+                        </div>
+
+                        <div class="suting_star suting_star1">
+                            <img src="./images/suting_star_big.png" alt="왼쪽_슈팅스타_이미지">
+                        </div>
+                        <div class="suting_star suting_star2">
+                            <img src="./images/suting_star_big.png" alt="오른쪽_슈팅스타_이미지">
+                        </div>
+                        <div class="suting_star_small suting_star_small_1">
+                            <img src="./images/suting_star_small.png" alt="왼쪽_작은_슈팅스타_이미지">
+                        </div>
+                        <div class="suting_star_small suting_star_small_2">
+                            <img src="./images/suting_star_small.png" alt="오른쪽_작은_슈팅스타_이미지">
+                        </div>
+
+                        <div class="cat">
+                            <img src="./images/cat_img.png" alt="고양이_이미지">
+                        </div>
+                        <div class="cat_foot1">
+                            <img src="./images/cat_foot.png" alt="왼쪽_고양이_발바닥">
+                        </div>
+                        <div class="cat_foot2">
+                            <img src="./images/cat_foot2.png" alt="왼쪽_고양이_발바닥">
+                        </div>
+
+                        <div class="banner_copy1">
+                            <img src="./images/banner_copy1.png" alt="귀여운_고양이_모양_문구">
+                        </div>
+                        <div class="banner_copy2">
+                            <img src="./images/banner_copy2.png" alt="아이스크림_하드바_문구">
+                        </div>
+                        <div class="banner_copy3">
+                            <img src="./images/banner_copy3.png" alt="부담없는_저당_저칼로리_문구">
+                        </div>
+
+                        <div class="star1_1">
+                            <img src="./images/Star_img1.png" alt="별1_이미지">
+                        </div>
+                        <div class="star1_2">
+                            <img src="./images/Star_img1.png" alt="별1_이미지">
+                        </div>
+                        <div class="star1_3">
+                            <img src="./images/Star_img1.png" alt="별1_이미지">
+                        </div>
+
+                        <div class="star2_1">
+                            <img src="./images/Star_img2.png" alt="별2_이미지">
+                        </div>
+                        <div class="star2_2">
+                            <img src="./images/Star_img2.png" alt="별2_이미지">
+                        </div>
+
+                        <div class="star3_1">
+                            <img src="./images/Star_img3.png" alt="별3_이미지">
+                        </div>
+                        <div class="star3_2">
+                            <img src="./images/Star_img3.png" alt="별3_이미지">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="newItem" class="reveal">
+                <div class="newItem_inner inner">
+                    <h2 class="newItem_tit">New item</h2>
+                    <span class="newItem_desc">
+                        새로 나온 스틱프렌즈의 <em>신제품을 소개합니다</em>
+                    </span>
+                    <div class="swiperBox">
+                        <div class="swiper mySwiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source
+                                            media="(max-width:780px)"
+                                            srcset="./images/new780_1.png">
+                                        <img src="./images/new_bg1.png">
+                                        <div class="slide_tit">
+                                            <span class="tit1">
+                                                산리오 캐릭터 아이스크림 3종
+                                            </span>
+                                            <span class="subtit1">
+                                                달콤하게! 당은적게!
+                                            </span>
+                                        </div>
+                                    </picture>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source
+                                            media="(max-width:780px)"
+                                            srcset="./images/new780_2.png">
+                                        <img src="./images/new_bg2.png">
+                                        <div class="slide_tit">
+                                            <span class="tit2">
+                                                너로 정했다! 포켓몬 아이스크림
+                                            </span>
+                                            <span class="subtit2">
+                                                소장하고 싶은 포켓볼 트레이
+                                            </span>
+                                        </div>
+                                    </picture>    
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source
+                                            media="(max-width:780px)"
+                                            srcset="./images/new780_3.png">
+                                        <img src="./images/new_bg3.png">
+                                        <div class="slide_tit">
+                                            <span class="tit3">
+                                                귀멸의 칼날 에디션
+                                            </span>
+                                            <span class="subtit3">
+                                                검을 쥔 순간 시원함이 시작된다
+                                            </span>
+                                        </div>
+                                    </picture>    
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source
+                                            media="(max-width:780px)"
+                                            srcset="./images/new780_4.png">
+                                        <img src="./images/new_bg4.png">
+                                        <div class="slide_tit">
+                                            <span class="tit4">
+                                                체리와 케로베로스가 함께하는
+                                            </span>
+                                            <span class="subtit4">
+                                                한정판 매지컬 아이스크림 봉인해제!
+                                            </span>
+                                        </div>
+                                    </picture>
+                                    <div class="cardBtn">
+                                        <img src="./images/cardBtn.png" alt="카드버튼">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div thumbsSlider="" class="swiper mySwiper">
+                            <div class="swiper-wrapper thumbs">
+                                <div class="swiper-slide">
+                                    <img src="./images/new_btn1.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/new_btn2.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/new_btn3.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/new_btn4.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="goods" class="reveal">
+                <div class="goodsinner inner">
+                    <div class="goods_title">
+                        <h2>Collabo Goods</h2>
+                        <p>스틱프렌즈와 콜라보한 굿즈를 만나보세요.</p>
+                    </div>
+                    <div class="swiper_box">
+                        <div class="swiper goodsSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/miffy_bottle.png" alt="미피 보틀">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-07-27 ~ 26-08-30 &gt;</span>
+                                        <p>미피 콜라보 아이스크림 구매시
+                                            <br>미피 콜라보 텀블러 9,900원
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/kitty_ecobag.png" alt="키티 에코백">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-07-27 ~ 26-08-30 &gt;</span>
+                                        <p>헬로키티x스틱프렌즈 <br>
+                                            한정판 굿즈를 만나보세요</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/cherry_keyring.png" alt="카캡체 키링">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-01 ~ 26-08-30 &gt;</span>
+                                        <p>카드캡터체리 콜라보기념
+                                            <br> 선착순 500명 키링 증정
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/hgd_doll.png" alt="한교동 인형">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-01 ~ 26-08-15 &gt;</span>
+                                        <p>한교동 콜라보 아이스크림 구매시
+                                            <br>한교동 인형 9,900원
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/demon_cardwallet.png" alt="귀칼 카드지갑">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-03 ~ 26-08-20 &gt;</span>
+                                        <p>귀멸의 칼날x스틱프렌즈
+                                            <br>캐릭터별 카드지갑 이벤트
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/cherry_doll.png" alt="카캡체 인형">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-01 ~ 26-08-30 &gt;</span>
+                                        <p>카드캡터체리 콜라보 인형 출시
+                                            <br>케로x스틱프렌즈
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/miffy_keyring.png" alt="미피 키링">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-10 ~ 26-08-30 &gt;</span>
+                                        <p>미피x스틱프렌즈 콜라보 상품 구매시
+                                            <br>선착순 500명 키링 증정
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/demon_photocard.png" alt="귀칼 포카">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-03 ~ 26-08-30 &gt;</span>
+                                        <p>귀멸의 칼날x스틱프렌즈 기념
+                                            <br>선착순 500명 포토카드 증정
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/kitty_keyring.png" alt="키티 키링">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-10 ~ 26-08-20 &gt;</span>
+                                        <p>헬로키티x스틱프렌즈 콜라보 상품 구매시
+                                            <br>선착순 100명 키링 증정
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goodsbox">
+                                        <img src="./images/goods/pocketmon_con.png" alt="포켓몬 지갑">
+                                    </div>
+                                    <div class="goods_txt">
+                                        <span> &lt; 26-08-10 ~ 26-08-30 &gt;</span>
+                                        <p>포켓몬x스틱프렌즈 콜라보 굿즈 출시</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-wrap">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="brand_store" class="reveal">
+                <div class="brandinner inner">
+                    <div class="brand_title">
+                        <h2>Brand & Store</h2>
+                        <p>스틱프렌즈와 콜라보한 굿즈를 만나보세요.</p>
+                    </div>
+                    <div class="brand_wrap">
+                        <div class="brand_box">
+                            <div class="brand">
+                                <a href="./brand/brand.html">
+                                <img src="./images/logo_1.png" alt="로고">
+                                </a>
+                                <p>스틱프렌즈를 소개합니다.
+                                    <br>귀여운 친구들과 함께하는 특별한 순간을 만나보세요.
+                                </p>
+                            </div>
+                            <div class="store">
+                                <a href="./place.html">
+                                <img src="./images/map.png" alt="지도">
+                                </a>
+                                <p>전국의 스틱프렌즈를 만나보세요!
+                                    <br>당신 곁 가장 가까운 매장은 어디일까요?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cardPopup">
+                <div class="cardSwiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.1" target="_blank">
+                                <img src="./images/card1.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.2" target="_blank">
+                                <img src="./images/card2.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.3" target="_blank">
+                                <img src="./images/card3.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.6" target="_blank">
+                                <img src="./images/card4.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.8" target="_blank">
+                                <img src="./images/card5.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.11" target="_blank">
+                                <img src="./images/card6.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.13" target="_blank">
+                                <img src="./images/card7.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.16" target="_blank">
+                                <img src="./images/card8.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.19" target="_blank">
+                                <img src="./images/card9.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.24" target="_blank">
+                                <img src="./images/card10.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.26" target="_blank">
+                                <img src="./images/card11.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.32" target="_blank">
+                                <img src="./images/card12.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.34" target="_blank">
+                                <img src="./images/card13.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.35" target="_blank">
+                                <img src="./images/card14.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.38" target="_blank">
+                                <img src="./images/card15.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.45" target="_blank">
+                                <img src="./images/card16.png">
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-2.51" target="_blank">
+                                <img src="./images/card17.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://namu.wiki/w/%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%B9%B4%EB%93%9C/%EB%AA%A9%EB%A1%9D#s-3.3" target="_blank">
+                                <img src="./images/card18.png">
+                            </a>
+                        </div>
+                       
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <button class="cardClose">close</button>
+            </div>
+            <footer id="footer">
+                <div class="footer_inner inner">
+                    <nav class="foot_info">
+                        <ul>
+                            <li><a href="javascript:void(0)">채용문의</a></li>
+                            <li><a href="javascript:void(0)">이용약관</a></li>
+                            <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                            <li><a href="javascript:void(0)">영상정보처리기기운영관리방침</a></li>
+                            <li><a href="javascript:void(0)">안전보건 경영방침</a></li>
+                            <li><a href="javascript:void(0)">공정거래자율준수</a></li>
+                        </ul>
+                    </nav>
+                    <div class="foot_logo">
+                        <a href="#"><img src="./images/foot_logo.png" alt="푸터로고"></a>
+                    </div>
+                    <div class="foot_link">
+                        <nav class="foot_nav">
+                            <ul>
+                                <li><a href="./menu.html">제품</a></li>
+                                <li><a href="./brand/brand.html">브랜드</a></li>
+                                <li><a href="./event/event.html">이벤트</a></li>
+                                <li><a href="./place.html">매장</a></li>
+                            </ul>
+                        </nav>
+                        <div class="foot_sns">
+                            <a href="#">
+                                <img src="./images/sns1.png" alt="스틱프렌즈">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="./images/sns2.png" alt="인스타그램">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img src="./images/sns3.png" alt="유튜브">
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <img src="./images/sns4.png" alt="페이스북">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foot_copy">
+                        Copyright © 2026 STICK Company. All Rights Reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="./scroll-reveal.js"></script>
+    <script src="./js/headerMenu.js"></script>
+    <script src="./index.html"></script>
+
+    <script>
+    </script>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김연경_메뉴페이지</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+
+    <!-- ============================================================ -->
+    <!-- 공통 헤더 -->
+    <!-- ============================================================ -->
+    <header id="header">
+        <div class="header_inner">
+            <div class="header">
+                <nav class="nav_left nav">
+                    <ul>
+                        <!-- MENU -> LINEUP 로 변경, hover 시 카테고리 드롭다운 노출 -->
+                        <li class="has_dropdown">
+                            <a href="menu.html">LINEUP</a>
+                            <ul class="product_dropdown">
+                                <li><a href="menu.html?cat=all">ALL</a></li>
+                                <li><a href="menu.html?cat=new">NEW</a></li>
+                                <li><a href="menu.html?cat=best">BEST</a></li>
+                                <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="brand/brand.html">BRAND</a></li>
+                    </ul>
+                </nav>
+                <p class="logo">
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="로고이미지">
+                    </a>
+                </p>
+                <nav class="nav_right nav">
+                    <ul>
+                        <li><a href="event/event.html">EVENT</a></li>
+                        <li><a href="place.html">PLACE</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_icon">
+                <div class="MY icon">
+                    <a href="mypage.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div>
+                <nav class="mnav icon">
+                    <a href="#" class="mnav_btn">
+                        <i class="fa-solid fa-paw"></i>
+                    </a>
+                </nav>
+            </div>
+            <nav class="mnav_menu">
+                <ul>
+                    <!-- 모바일: LINEUP 탭하면 하위 카테고리 펼침/접힘 -->
+                    <li class="mnav_has_dropdown">
+                        <a href="menu.html" class="mnav_product_link">LINEUP</a>
+                        <ul class="mnav_product_dropdown">
+                            <li><a href="menu.html?cat=all">ALL</a></li>
+                            <li><a href="menu.html?cat=new">NEW</a></li>
+                            <li><a href="menu.html?cat=best">BEST</a></li>
+                            <li><a href="menu.html?cat=collab">COLLAB</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="brand/brand.html">BRAND</a></li>
+                    <li><a href="event/event.html">EVENT</a></li>
+                    <li><a href="place.html">PLACE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="products_page">
+        <div class="product_inner">
+            <div class="paw_path1">
+                <img src="images/foot_img.png" class="paw1 paw1_1" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw1 paw1_2" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw1 paw1_3" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw1 paw1_4" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw1 paw1_5" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw1 paw1_6" alt="발바닥_이미지">
+            </div>
+            <div class="paw_path2">
+                <img src="images/foot_img.png" class="paw2 paw2_1" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw2 paw2_2" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw2 paw2_3" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw2 paw2_4" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw2 paw2_5" alt="발바닥_이미지">
+                <img src="images/foot_img.png" class="paw2 paw2_6" alt="발바닥_이미지">
+            </div>
+
+            <h1><img src="./images/PRODUCTS.png" alt="PRODUCTS"></h1>
+            <p class="products_copy products_copy1">귀여운 하드냥들을 소개합니다!</p>
+            <p class="products_copy products_copy2">당신의 하드냥을 선택해보세요!</p>
+
+            <!-- 탭버튼 -->
+            <ul class="tab_btn_group">
+                <li><a href="#">ALL</a></li>
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">BEST</a></li>
+                <li><a href="#">COLLAB</a></li>
+            </ul>
+
+            <!-- 상품박스들 (아래 script에서 products 배열로 자동 생성) -->
+            <div class="product_group">
+            </div>
+
+            <!-- 숫자버튼 -->
+            <ul class="number_btn_group">
+                <li><a href="#"><img src="./images/prev_btn.png" alt="prev_icon"></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><img src="./images/next_btn.png" alt="next_icon"></a></li>
+            </ul>
+
+        </div>
+
+        <!-- 상품배너 -->
+        <div class="products_banner">
+            <img src="./images/cat_banner.png" alt="고양이_배너_스킨">
+
+
+        </div>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- 공통 푸터 -->
+    <!-- ============================================================ -->
+    <footer id="footer">
+        <div class="footer_inner">
+            <nav class="foot_info">
+                <ul>
+                    <li><a href="javascript:void(0)">채용문의</a></li>
+                    <li><a href="javascript:void(0)">이용약관</a></li>
+                    <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                    <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                    <li><a href="javascript:void(0)">영상정보처리기기운영관리방침</a></li>
+                    <li><a href="javascript:void(0)">안전보건 경영방침</a></li>
+                    <li><a href="javascript:void(0)">공정거래자율준수</a></li>
+                </ul>
+            </nav>
+            <div class="foot_logo">
+                <a href="#"><img src="./images/foot_logo.png" alt="푸터로고"></a>
+            </div>
+            <div class="foot_link">
+                <nav class="foot_nav">
+                    <ul>
+                        <li><a href="./menu.html">메뉴</a></li>
+                        <li><a href="./brand/brand.html">브랜드</a></li>
+                        <li><a href="./event/event.html">이벤트</a></li>
+                        <li><a href="./place.html">매장</a></li>
+                    </ul>
+                </nav>
+                <div class="foot_sns">
+                    <a href="#">
+                        <img src="./images/sns1.png" alt="스틱프렌즈">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="./images/sns2.png" alt="인스타그램">
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <img src="./images/sns3.png" alt="유튜브">
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <img src="./images/sns4.png" alt="페이스북">
+                    </a>
+                </div>
+            </div>
+            <div class="foot_copy">
+                Copyright © 2026 STICK Company. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="./js/headerMenu.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>
